@@ -1,3 +1,4 @@
+//Все сделал
 public class LessonOne {
     public static void main (String[] args){
         byte myByte=2;
