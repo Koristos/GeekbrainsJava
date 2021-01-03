@@ -1,0 +1,20 @@
+
+Vasya >>> Hi, dear!
+Petya >>> How are you?
+Petya >>> I'm fine!
+Vasya >>> Good!
+Vasya шепчет Petya >>> How are the holidays?
+Petya шепчет Vasya >>> Nice, and yours?
+Server >>>Пользователь Petya покинул чат.
+Petya >>> 1
+Vasya >>> 2
+Petya >>> 3
+Vasya >>> 4
+Petya >>> 5
+Vasya >>> 6
+Petya >>> 7
+Vasya >>> 8
+Petya >>> 9
+Vasya >>> 10
+Vasya >>> Hi everybody!
+Server >>>Пользователь Petya покинул чат.
