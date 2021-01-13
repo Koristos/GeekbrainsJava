@@ -4,9 +4,9 @@ import java.sql.*;
 
 public class ClientBase {
 
-    public int createUser (User newUser){
+    public String createUser (User newUser){
         Connection connection = ConnectionService.connectUserBase();
-        int row=0;
+        String result=null;
         try {
             connection.setAutoCommit(false);
             PreparedStatement statement = connection.prepareStatement(
@@ -15,21 +15,21 @@ public class ClientBase {
             statement.setString(2,newUser.getPassword());
             statement.setString(3,newUser.getNickname());
 
-            row = statement.executeUpdate();
-
+            if (statement.executeUpdate()==1){
+                result="done";
+            }
             connection.commit();
-
-            return row;
+            return result;
 
         } catch (SQLIntegrityConstraintViolationException e){
-            row=99;
+            result="parameters occupied";
         }catch (SQLException throwables) {
             ConnectionService.rollback(connection);
-            throwables.printStackTrace();
+            throw new RuntimeException("SWW with creating new user. Rollback committed.");
         }finally {
             ConnectionService.close(connection);
         }
-        return row;
+        return result;
     }
 
     public User checkUser (String login){
@@ -44,16 +44,16 @@ public class ClientBase {
             }
 
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            throw new RuntimeException("SWW with checking user in database.");
         }finally {
             ConnectionService.close(connection);
         }
         return user;
     }
 
-    public int changeNickname (User user){
+    public String changeNickname (User user){
         Connection connection = ConnectionService.connectUserBase();
-        int row=0;
+        String result=null;
         try {
             connection.setAutoCommit(false);
             PreparedStatement statement = connection.prepareStatement(
@@ -61,21 +61,21 @@ public class ClientBase {
             statement.setString(1, user.getNickname());
             statement.setString(2,user.getLogin());
 
-            row = statement.executeUpdate();
-
+            if (statement.executeUpdate()==1){
+                result="done";
+            }
             connection.commit();
-
-            return row;
+            return result;
 
         } catch (SQLIntegrityConstraintViolationException e){
-            row=99;
+            result="parameters occupied";
         }catch (SQLException throwables) {
             ConnectionService.rollback(connection);
-            throwables.printStackTrace();
+            throw new RuntimeException("SWW with updating user. Rollback committed.");
         }finally {
             ConnectionService.close(connection);
         }
-        return row;
+        return result;
     }
 
 }

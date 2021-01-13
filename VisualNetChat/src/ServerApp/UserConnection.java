@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
 
 public class UserConnection {
     private User user=null;
@@ -11,10 +12,12 @@ public class UserConnection {
     private DataOutputStream out;
     private Socket socket;
     private ChatServer server;
+    private ExecutorService controller;
 
     UserConnection(Socket socket, ChatServer server) {
         this.socket = socket;
         this.server = server;
+        this.controller=server.getThreadsController();
         try {
             this.in = new DataInputStream(socket.getInputStream());
             this.out = new DataOutputStream(socket.getOutputStream());
@@ -23,17 +26,17 @@ public class UserConnection {
             exit();
         }
 
-        new Thread(()->{
+        controller.execute(()->{
             try {
                 Thread.sleep(120000);
                 if(this.user==null) exit();
             } catch (InterruptedException e) {
                 System.out.println("Verification expired");
             }
-        }).start();
+        });
 
 
-        new Thread(()->{
+        controller.execute(()->{
             try {
                 server.getAuthorisationService().authorise(this);
                 server.getHistoryStorage().checkUserHistoryFile(this.getLogin());
@@ -50,7 +53,7 @@ public class UserConnection {
                     break;
                 }
             }
-        }).start();
+        });
 
     }
 
