@@ -18,3 +18,7 @@ Petya >>> 9
 Vasya >>> 10
 Vasya >>> Hi everybody!
 Server >>>Пользователь Petya покинул чат.
+Vasya >>> wgflkh
+Vasya >>> 111
+Kolya шепчет Vasya >>> nononon
+Server >>>Пользователь Kolya покинул чат.

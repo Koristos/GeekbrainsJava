@@ -25,6 +25,7 @@ public class LoginService {
                     connection.setUser(user);
                     addChatConnection(connection);
                     connection.sendMessage("authorisationmessage Вы авторизованы. Добро пожаловать в чат!");
+
                 }
             }
         }while (!authorisationPassed);

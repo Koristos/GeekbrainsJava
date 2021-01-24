@@ -5,6 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import org.apache.log4j.Logger;
 
 public class ChatServer {
 
@@ -12,6 +13,7 @@ public class ChatServer {
     private LoginService authorisationService;
     private StoryManagement history;
     private ExecutorService threadsController;
+    private static final Logger logger = Logger.getLogger(ChatServer.class);
 
     public void boot() {
         authorisationService = new LoginService();
@@ -20,13 +22,13 @@ public class ChatServer {
 
         try {
             this.serverSocket = new ServerSocket(555);
-            System.out.println("Server is up and waiting for connections...");
+            logger.info("Server booted");
 
             while (true) {
                 Socket socket = serverSocket.accept();
-                System.out.println("Connection commited.");
+                logger.info("Connection committed");
                 new UserConnection(socket, this);
-                System.out.println("Connection confirmed.");
+                logger.info("Connection confirmed.");
 
             }
 
@@ -45,6 +47,7 @@ public class ChatServer {
         for (UserConnection a : authorisationService.getConnectionList()) {
             a.sendMessage(message);
             history.addToHistory(a.getLogin(), message);
+            logger.info(a.getLogin()+" sent broadcast");
         }
     }
 
@@ -58,6 +61,7 @@ public class ChatServer {
         } else {
             author.sendMessage("Server >>> Сообщение не доставлено. Пользователь " + recipient + " в настоящий помент не в сети.");
         }
+        logger.info(author.getLogin()+" sent private message");
     }
 
     public StoryManagement getHistoryStorage() {

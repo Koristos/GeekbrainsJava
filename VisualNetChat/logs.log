@@ -1,0 +1,16 @@
+2021-01-25 00:27:50 INFO  ChatServer:25 - Server booted
+2021-01-25 00:28:05 INFO  ChatServer:29 - Connection committed
+2021-01-25 00:28:05 INFO  ChatServer:31 - Connection confirmed.
+2021-01-25 00:29:40 INFO  ChatServer:25 - Server booted
+2021-01-25 00:29:46 INFO  ChatServer:29 - Connection committed
+2021-01-25 00:29:46 INFO  ChatServer:31 - Connection confirmed.
+2021-01-25 00:29:56 INFO  ChatServer:50 - user1 sent broadcast
+2021-01-25 00:29:57 INFO  ChatServer:50 - user1 sent broadcast
+2021-01-25 00:30:05 INFO  ChatServer:29 - Connection committed
+2021-01-25 00:30:05 INFO  ChatServer:31 - Connection confirmed.
+2021-01-25 00:30:19 INFO  ChatServer:50 - user1 sent broadcast
+2021-01-25 00:30:19 INFO  ChatServer:50 - user2 sent broadcast
+2021-01-25 00:30:46 INFO  ChatServer:50 - user1 sent broadcast
+2021-01-25 00:30:46 INFO  ChatServer:50 - user2 sent broadcast
+2021-01-25 00:31:07 INFO  ChatServer:64 - user1 sent private message
+2021-01-25 00:31:42 INFO  ChatServer:50 - user2 sent broadcast
