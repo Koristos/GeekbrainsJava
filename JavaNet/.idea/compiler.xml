@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="server" />
+        <module name="lesson-3" />
+        <module name="common" />
+        <module name="lesson-4" />
+        <module name="lesson-1" />
+        <module name="lesson-2" />
+        <module name="lesson-7" />
+        <module name="client" />
+        <module name="lesson-6" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="client" target="11" />
+      <module name="common" target="11" />
+      <module name="java-net-course" target="11" />
+      <module name="lesson-1" target="11" />
+      <module name="lesson-2" target="11" />
+      <module name="lesson-3" target="11" />
+      <module name="lesson-4" target="11" />
+      <module name="lesson-6" target="11" />
+      <module name="lesson-7" target="11" />
+      <module name="project" target="11" />
+      <module name="server" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

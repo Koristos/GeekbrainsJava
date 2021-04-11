@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="53f334bb-da75-46ab-b0c3-4ee835d1a113" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../project/client/src/main/java/ru/daniilazarnov/ClientConfigProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/client/src/main/java/ru/daniilazarnov/ClientModuleManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/client/src/main/java/ru/daniilazarnov/InputCommandAnalyser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project/client/src/main/java/ru/daniilazarnov/YesNoConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project/client/src/main/java/ru/daniilazarnov/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project/client/src/main/java/ru/daniilazarnov/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project/client/src/main/java/ru/daniilazarnov/ClientCommandReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project/client/src/main/java/ru/daniilazarnov/ClientCommandReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project/client/src/main/java/ru/daniilazarnov/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project/client/src/main/java/ru/daniilazarnov/Console.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project/client/src/main/java/ru/daniilazarnov/RepoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project/client/src/main/java/ru/daniilazarnov/RepoClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project/common/src/main/java/ru/daniilazarnov/ClientPathHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project/common/src/main/java/ru/daniilazarnov/ClientPathHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project/common/src/main/java/ru/daniilazarnov/CommandList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project/common/src/main/java/ru/daniilazarnov/CommandList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project/common/src/main/java/ru/daniilazarnov/RepoDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project/common/src/main/java/ru/daniilazarnov/RepoDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project/common/src/main/java/ru/daniilazarnov/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project/common/src/main/java/ru/daniilazarnov/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project/server/src/main/java/ru/daniilazarnov/ServerCommandReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project/server/src/main/java/ru/daniilazarnov/ServerCommandReader.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1po89aAyRcAtepCy9y0I6hQCBRB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lesson-2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53f334bb-da75-46ab-b0c3-4ee835d1a113" name="Default Changelist" comment="" />
+      <created>1615837932663</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615837932663</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1616089321787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1616089321787" />
+  </component>
+</project>
