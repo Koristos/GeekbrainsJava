@@ -62,10 +62,10 @@ public class LoginService {
     }
 
     public void changeNickName (UserConnection connection,User updatedUser){
-        if (clientList.changeNickname(updatedUser)==1){
+        if (clientList.changeNickname(updatedUser).equals("done")){
             connection.setUser(updatedUser);
             connection.sendMessage("authorisationmessage Ваш псевдоним успешно изменен!");
-        }else if (clientList.changeNickname(updatedUser)==99){
+        }else if (clientList.changeNickname(updatedUser).equals("parameters occupied")){
             connection.sendMessage("authorisationmessage Данный псевдоним уже занят!");
         }else connection.sendMessage("authorisationmessage Ошибка обновления. Попробуйте еще раз!");
     }

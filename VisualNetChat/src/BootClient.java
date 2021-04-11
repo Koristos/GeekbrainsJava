@@ -4,4 +4,7 @@ public class BootClient {
     public static void main(String[] args) {
         new ClientApp();
     }
+
+    public static class AbcPrinter {
+    }
 }
