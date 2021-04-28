@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Homework</title>
+    <link rel="stylesheet" th:href="@{/styles/css/styles.css}"/>
+</head>
+<body class="body_contaiter">
+    <div class="header">
+        <div class="links">
+            <div class="links_item">
+                <a href="./">Main</a>
+            </div>
+            <div class="links_item">
+                <a href="./cart">Cart</a>
+            </div>
+        </div>
+        <div class="project_name">
+            <h1>Spring Lesson Three Hometask</h1>
+        </div>
+    </div>
+    <div class="content_box">
+        <form action="#" th:action="@{/addform}" method="post" th:object="${person}">
+            <h2 class="project_name">Please, fill the form to add a new product:<h2>
+            <div class="field">
+                <label class="field_label">Product name</label>
+                <input type="text" class="field_input" id="name" name="name"/>
+            </div>
+            <div class="field">
+                <label class="field_label">Product description</label>
+                <input type="text" class="field_input description" id="description" name="description"/>
+            </div>
+            <div class="field">
+                <label class="field_label">Product price</label>
+                <input type="number" step=".01" class="field_input" id="price" name="price"/>
+            </div>
+            <div class="field">
+                <button type="submit" class="field_input submit_button">Add to the product list.</button>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="info">
+            <hr>
+            <h4 class="copyright">&#xA9 Koristos</h4>
+        </div>
+    </div>
+</body>
+</html>
