@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1251" />
+    <title>Title</title>
+</head>
+<body>
+<h1>Spring Lesson Five</h1>
+<ul>
+    <li><a href="./">Главная</a></li>
+    <li><a href="./products">Список продуктов</a></li>
+</ul>
+<h3>Подробно продукте</h3>
+<div>
+    <form action="#" th:action="@{/details(id=${product.id})}" method="post" th:object="${product}">
+        <label>Product name</label>
+        <input type="text" id="title" name="title"  th:value="${product.title}"/>
+        <label>Product price</label>
+        <input type="number" id="price" name="price"  th:value="${product.price}"/>
+        <button type="submit">Обновить товар</button>
+    </form>
+</div>
+<div>
+    <form action="#" th:action="@{/details(id=${product.id})}" th:method="delete">
+        <button type="submit">Удалить товар</button>
+    </form>
+</div>
+
+</body>
+</html>

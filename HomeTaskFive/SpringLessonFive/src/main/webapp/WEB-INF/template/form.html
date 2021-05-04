@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1251" />
+    <title>Title</title>
+</head>
+<body>
+<h1>Spring Lesson Five</h1>
+<ul>
+    <li><a href="./">Главная</a></li>
+    <li><a href="./products">Список продуктов</a></li>
+</ul>
+<h3>Добавьте новый продукт</h3>
+<div>
+    <form action="#" th:action="@{/form}" method="post" th:object="${product}">
+        <label>Product name</label>
+        <input type="text" id="title" name="title"/>
+        <label>Product price</label>
+        <input type="number" id="price" name="price"/>
+        <button type="submit">Добавить товар</button>
+    </form>
+</div>
+
+</body>
+</html>

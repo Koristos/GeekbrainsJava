@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Homework</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+</head>
+<body class="body_contaiter">
+    <div class="header">
+        <div class="links">
+            <div class="links_item">
+                <a href="#">Main</a>
+            </div>
+            <div class="links_item">
+                <a href="./cart">Cart</a>
+            </div>
+        </div>
+        <div class="project_name">
+            <h1>Spring Lesson Four Hometask</h1>
+        </div>
+    </div>
+    <div class="content_box">
+        <div class="content">
+            <h2>Product list</h2>
+            <p>This page contains all the products in the storage.</p>
+            <a class="content_button" href="./storage">Go to the product list -></a>
+        </div>
+        <div class="content">
+            <h2>Add product</h2>
+            <p>Here you can add a new product to the storage. A special form will be provided.</p>
+            <a class="content_button" href="./addform">Proceed with special form -></a>
+        </div>
+        <div class="content">
+            <h2>Your cart</h2>
+            <p>Look what you got in your cart.</p>
+            <a class="content_button" href="./cart">Go to the cart -></a>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="info">
+            <hr>
+            <h4 class="copyright">&#xA9 Koristos</h4>
+        </div>
+    </div>
+</body>
+</html>
