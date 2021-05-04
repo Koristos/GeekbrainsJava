@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body_contaiter{
+    width: 100%;
+    margin: 0 auto;
+    font-family: sans-serif;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.header {
+    height: 200px;
+    background-color:lightgreen;
+}
+
+.links{
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links_item{
+    font-size:large;
+    font-weight: 700;
+}
+
+.project_name{
+    display: flex;
+    justify-content: center;
+    font-family: "Courier New";
+}
+
+.content_box{
+    padding: 50px 160px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(222, 248, 222);
+
+}
+
+.content{
+    height: 250px;
+    width: 250px;
+    background-color:oldlace;
+    border: 2px inset black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+    margin: 15px 15px;
+    font-family: "Courier New";
+    justify-content: space-around;
+}
+
+.content_button {
+    text-decoration: none;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    text-align: center;
+    width: 80%;
+    height: 30px;
+    padding: 5px 0px;
+    border: 2px inset black;
+    border-radius: 10px;
+    color:black;
+    background-color: lightgreen;
+}
+
+.footer{
+    background-color: oldlace;
+    font-family: "Courier New";
+    padding-top: 100px;
+    min-height: 100px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.copyright{
+    margin-top: 20px;
+}
+
+.field{
+    width: 100%;
+    margin: 15px 0px;
+}
+.field_label {
+    font-family: "Courier New";
+    font-size: large;
+}
+.field_input{
+    width: 100%;
+}
+
+.description{
+    height: 100px;
+}
+
+.submit_button{
+    border: 2px inset black;
+    border-radius: 10px;
+    color:blue;
+    background-color: lightgreen;
+    height: 30px;
+    padding: 5px 0px;
+}
+.cart_box{
+    flex-direction: column;
+}
+
+.cart_content{
+    width: 100%;
+    background-color: oldlace;
+    display: flex;
+    justify-content: space-between;
+    border: 2px inset black;
+    font-family: "Courier New";
+    margin: 30px 0px;
+    padding: 15px 60px;
+}
+
+.cart_button{
+    width: 120px;
+    height: 20px;
+}
