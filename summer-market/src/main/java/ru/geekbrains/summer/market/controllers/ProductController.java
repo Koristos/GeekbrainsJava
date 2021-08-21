@@ -9,8 +9,11 @@ import ru.geekbrains.summer.market.model.Product;
 import ru.geekbrains.summer.market.repositories.specifications.ProductSpecifications;
 import ru.geekbrains.summer.market.services.ProductService;
 import ru.geekbrains.summer.market.exceptions.ResourceNotFoundException;
+import ru.geekbrains.summer.market.utils.SpecHelper;
+import ru.geekbrains.summer.market.utils.SpecOption;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -27,17 +30,10 @@ public class ProductController {
     @GetMapping
     public Page<ProductDto> findAll(
             @RequestParam(name = "p", defaultValue = "1") int pageIndex,
-            @RequestParam(name = "min_price", required = false) BigDecimal minPrice,
-            @RequestParam(name = "title", required = false) String title
+            @RequestParam(name = "spec_options", required = false) List<SpecOption> options
     ) {
-        Specification<Product> spec = Specification.where(null);
-        if (minPrice != null) {
-            spec = spec.and(ProductSpecifications.priceGreaterOrEqualsThan(minPrice));
-        }
-        if (title != null) {
-            spec = spec.and(ProductSpecifications.titleLike(title));
-        }
-        return productService.findPage(pageIndex - 1, 5, spec).map(ProductDto::new);
+        return productService.findPage(pageIndex - 1, 5,
+                SpecHelper.buildProductSpecification(options)).map(ProductDto::new);
     }
 
 
