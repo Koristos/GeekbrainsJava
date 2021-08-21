@@ -2,6 +2,8 @@ package ru.geekbrains.summer.market;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import ru.geekbrains.summer.market.configs.AppConfig;
 
 @SpringBootApplication
 public class SummerMarketApplication {
