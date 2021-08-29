@@ -12,7 +12,9 @@ public class SpecHelper {
 
     public static Specification<Product> buildProductSpecification (List<SpecOption> specList){
         Specification<Product> spec = Specification.where(null);
-        specList.forEach(sp -> addSpecification(spec, sp.getName(), sp.getValue()));
+        if (specList != null) {
+            specList.forEach(sp -> addSpecification(spec, sp.getName(), sp.getValue()));
+        }
         return spec;
     }
 
