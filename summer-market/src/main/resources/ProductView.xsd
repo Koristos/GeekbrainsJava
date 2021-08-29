@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="http://ru.geekbrains.com/summer/market/productview"
+        targetNamespace="http://ru.geekbrains.com/summer/market/productview" elementFormDefault="qualified">
+
+    <xs:element name="getProductViewByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAllProductViewRequest">
+        <xs:complexType/>
+    </xs:element>
+
+    <xs:element name="getProductViewByIdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product-view" type="tns:product-view"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAllProductViewResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product-views" maxOccurs="unbounded" type="tns:product-view"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="product-view">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="categoryTitle" type="xs:string"/>
+            <xs:element name="price" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
