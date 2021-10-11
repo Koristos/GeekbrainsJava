@@ -25,8 +25,8 @@ angular.module('app').controller('ordersController', function ($scope, $http, $l
             return actions.order.create({
                 purchase_units: [{
                     amount: {
-                        currency: 'EUR',
-                        value: '1.00'
+                        currency: 'USD',
+                        value: '10.00'
                     }
                 }]
             });
