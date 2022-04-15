@@ -1,0 +1,45 @@
+
+<script>
+    paypal.Buttons().render('#paypal-button-container');
+    // This function displays Smart Payment Buttons on your web page.
+</script>
+<script
+        src="https://www.paypal.com/sdk/js?client-id=AQLQ4MXqJMEKOWOSdgPXwsTkO7Wapkk4-VBjmvbP9P3p8WxVpfBvjnwNxOJltAuZCNVQyInamvFUl_dz"> // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
+</script>
+<div>
+    <p></p>
+    <h3>Ваши заказы</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>Детали</td>
+            <td>Адрес доставки</td>
+            <td>Телефон</td>
+            <td>Цена</td>
+            <td></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="o in orders">
+            <td>{{o.id}}</td>
+            <td>
+                <div ng-repeat="oi in o.items">
+                    <span>{{oi.productTitle + ' x' + oi.quantity}}</span>
+                    <p></p>
+                </div>
+
+            </td>
+            <td>{{o.address}}</td>
+            <td>{{o.phone}}</td>
+            <td>{{o.price}}</td>
+            <td>
+                <button class="btn btn-primary" ng-click="pay(o.id)">Оплатить</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    </div>
+<div id="paypal-button-container">
+</div>
