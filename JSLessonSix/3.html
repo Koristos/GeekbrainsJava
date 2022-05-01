@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  <style>
+    i {
+      font-size: 50px;
+    }
+    .golden {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Выполнить все задачи в теге script. Комментарии, в которых написаны задачи, не
+стирать, код с решением задачи пишем под комментарием.
+-->
+
+<div class="stars_container">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+</div>
+
+<script>
+  "use strict";
+
+  /*
+  1. При наведении на любую из звезд, данной звезде должен ставиться класс
+  golden, также такой класс должен ставиться всем звездам до нее слева.
+  */
+
+  const starsContainer = document.querySelector(".stars_container");
+  const stars = document.querySelectorAll(".fa-star");
+
+  starsContainer.addEventListener("mouseover", (event) => {
+    if (event.target.classList.contains("fa-star")){
+      event.target.classList.add("golden");
+      for (const star of stars) {
+        if (!star.classList.contains("golden")){
+          star.classList.add("golden");
+        } else {
+          break;
+        }
+      }
+    }
+  });
+
+  /*
+  2. Когда мы уводим курсор мыши от звезды, все поставленные классы из первого
+  задания должны быть удалены.
+   */
+
+   starsContainer.addEventListener("mouseout", (event) => {
+    if (event.target.classList.contains("fa-star")){
+      for (const star of stars) {
+        star.classList.remove("golden");
+      }
+    }
+  });
+
+
+  /*
+  3. Когда мы переводим мышь от одной звезды к другой, у нас могут мигать
+  звезды (временно могут становиться черными). Почему так? Напишите словами.
+  Можем ли мы это исправить? Если да, то предложите решение.
+  */
+
+  /*
+  Честно подсмотрел в решении и попробовал. Комментарии ниже:
+  1. запись получается нечитаемой. не подходит
+  2. Все равно остаются пробелы. Если сместить еще, звезды некрасиво накладываются
+  3. Работает корректно. Остановился на нем.
+  4. Также отлично работает.
+   */
+
+  /*
+  Дело в том, что между звездами есть пробел, в html это перенос строки. Мы
+  можем:
+  1. Записать все теги i слитно, без пробелов и переносов строк в html.
+  2. Можем добавить классу .fa или .fas свойство margin-right: -5px;
+  3. Может добавить классу .stars_container свойство display: flex;
+  4. Можем исправить это в JavaScript удалив все текстовые узлы в теге с
+  классом stars_container, что в примере ниже.
+   */
+
+   starsContainer.style.display = "flex";
+
+
+</script>
+</body>
+</html>
